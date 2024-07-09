@@ -1,0 +1,34 @@
+<div class="review-main">
+
+    <form *ngIf="user" [formGroup]="reviewsForm" (ngSubmit)="addReview()">
+        <mat-form-field>
+            <mat-label for="review">Review: </mat-label>
+            <textarea matInput rows="3" maxlength="550" formControlName="review" placeholder="Write a review!"></textarea>
+        </mat-form-field>
+    
+        <div class="break"></div>
+        <span>
+            <span><button mat-raised-button color="primary" type="submit">Add Review</button></span>
+        </span>
+    </form>
+
+    <ng-container [ngSwitch]="reviews.length">
+        <div *ngSwitchCase="0">
+            <h3 class="no-reviews">No reviews yet for this medication!</h3>
+        </div>
+        <div *ngSwitchDefault>
+            <table>
+                <tr>
+                    <th>User</th>
+                    <th>Review</th>
+                    <th>Date</th>
+                </tr>
+                <tr *ngFor="let review of reviews; let i = index;" [ngClass]="i % 2 === 0 ? 'table-header-even' : 'table-header-odd'">
+                    <td class="rev-el">{{review.username}}</td>
+                    <td class="Reviewtext-el">{{review.review}} </td>
+                    <td class="rev-el">{{review.date | dateFormat}}<span class="delete" *ngIf="user?.userName === review.username"><button class="del-button" mat-mini-fab color="primary" type="button" (click)="DeleteReview(review.username, review.id)">X</button></span></td>
+                </tr>
+            </table>
+        </div>
+    </ng-container>
+</div>

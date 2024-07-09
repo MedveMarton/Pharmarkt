@@ -1,0 +1,26 @@
+
+<mat-sidenav-container>
+  <mat-sidenav #sidenav>
+      <app-pagemenu (onCloseSidenav)="onClose($event, sidenav)" [isLoggedIn]="currentUser" (onLogout)="logOut()"></app-pagemenu>
+  </mat-sidenav>
+  <mat-sidenav-content>
+      <mat-toolbar color="primary">
+          <div class="navbutton">
+              <button mat-icon-button (click)="onToggleSideNav(sidenav)" >
+                  <mat-icon>menu</mat-icon>
+              </button>
+          </div>
+          <span class="title">Pharmarkt</span>
+          <span class="example-spacer"></span>
+          <div class="toolnav">
+              <a routerLink="main">Main</a>
+              <a routerLink="pharmstore">Store</a>
+              <a *ngIf="currentUser" routerLink="cart">  <span class="material-icons">shopping_cart</span>Cart</a>
+              <a *ngIf="currentUser" routerLink="login" (click)="logOut()">Logout</a>
+              <a *ngIf="!currentUser" routerLink="login">Login</a>
+              <a *ngIf="!currentUser" routerLink="regist">Registration</a>
+          </div>
+        </mat-toolbar>
+      <router-outlet></router-outlet>
+  </mat-sidenav-content>
+</mat-sidenav-container>

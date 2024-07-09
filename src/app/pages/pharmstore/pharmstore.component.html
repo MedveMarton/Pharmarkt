@@ -1,0 +1,33 @@
+
+  <h1>Pharm Store</h1>
+
+  <div class="grid-container">
+  <mat-grid-list [cols]="breakpoint" rowHeight="1:1.65" (window:resize)="onResize($event)">
+    <mat-grid-tile *ngFor="let Pharm of Pharmsslice">
+      <mat-card class="store-card">
+        <mat-card-header>
+          <img mat-card-avatar src={{Pharm.headerurl}}>
+          <mat-card-title>{{Pharm.title}}</mat-card-title>
+          <mat-card-subtitle>{{Pharm.subtitle}}</mat-card-subtitle>
+        </mat-card-header>
+        <img class="mainimg" mat-card-image src={{Pharm.imgurl}}>
+        <mat-card-content>
+          <p class="card-desc">
+            {{Pharm.content}}
+          </p>
+        </mat-card-content>
+        <mat-card-actions>
+          <button mat-button [routerLink]="['pharm/', Pharm.id]">Order / View</button>
+        </mat-card-actions>
+      </mat-card>
+    </mat-grid-tile>
+  </mat-grid-list>
+</div>
+
+<mat-paginator [length]="this.Pharms.length"
+[pageSize]="4"
+[pageSizeOptions]="[2, 4, 8, 16]"
+(page)="OnPageChange($event)">
+</mat-paginator>
+
+

@@ -1,0 +1,18 @@
+
+ 
+    <h1>Pharma product:</h1>
+    <div class="pharm-main" *ngIf="pharm">
+      <img mat-card-avatar class="mainimg" mat-card-image src={{pharm.imgurl}}>
+        <mat-card-title><p>{{pharm.title}}</p></mat-card-title>
+        <mat-card-subtitle><p>{{pharm.subtitle}}</p></mat-card-subtitle>
+      <p>{{ pharm.content }}</p>
+      <mat-card-actions>
+
+      <button mat-raised-button color="primary" type="button" (click)="addToCart(pharm)">Add to cart!</button>
+      <button mat-raised-button color="primary" (click)="goBack()">Back</button>
+
+      </mat-card-actions>
+      <app-reviews></app-reviews>
+    </div>
+
+  

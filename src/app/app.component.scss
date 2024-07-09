@@ -1,0 +1,51 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+
+.mat-toolbar.mat-primary {
+  background: #b0e0e6;
+  color: #042e35;
+}
+
+a {
+  text-decoration: none;
+  color: #042e35;
+  padding-left: 5pt;
+}
+
+a:hover, a:active {
+  color: #36cadd;
+}
+
+div {
+  display: flex;
+  flex-direction: row; // fxLayout
+  flex-wrap: wrap; //fxLayout
+  align-content: stretch; // fxLayoutAlign
+  align-items: stretch; // fxLayoutAlign
+  justify-content: flex-end; // fxLayoutAlign
+}
+
+
+
+@media only screen and (min-width: 900px) {
+  .navbutton {
+      display: none;
+  }
+}
+
+
+@media only screen and (max-width: 900px) {
+  .toolnav {
+      display: none;
+  }
+}
+
+.title{
+  font-size: 25pt;
+}
+
+mat-sidenav {
+  width: 200px;
+  background-color:#92cdd4;
+}

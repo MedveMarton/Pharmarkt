@@ -1,0 +1,67 @@
+.review-main {
+    display: grid;
+    place-items: center;
+    height: 100vh;
+}
+
+
+.no-reviews{
+    text-align: center;
+    margin-top: 50px;
+}
+
+mat-form-field{
+    min-width: 65vw;
+}
+
+form {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.mat-primary{
+    background-color: #b0e0e6;
+    color: black;
+}
+
+table{
+    margin-top: 50px;
+}
+
+.table-header-even{
+    background-color: #d9edee;
+    color: black;
+}
+
+.table-header-odd{
+    background-color: #cbe5e9;
+    color: black;
+}
+
+.Reviewtext-el{
+    min-width: 15vw;
+    padding: 10px;
+    max-width: 80vw;
+    overflow-wrap: break-word;
+}
+
+.delete{
+    padding-left: 10px;
+    padding-top: 2px;
+}
+
+.del-button{
+    width: 25px !important;
+    height: 25px !important;
+    font-size: 20px;
+    text-align: center;
+    float: right;
+}
+
+.rev-el{
+    padding: 10px;
+}
+
+.break{
+    padding-top: 10px;
+}

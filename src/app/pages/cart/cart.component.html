@@ -1,0 +1,23 @@
+<div class="pharm-main">
+<mat-card class="store-card">
+<h1 class="title">Cart</h1>
+<div class="cart-main">
+  <div class="cart-item" *ngFor="let item of items">
+    <span class="item">{{item.title }}</span>
+    <span class="item">{{item.subtitle}}</span>
+  </div>
+  <mat-card-actions *ngIf="items">
+    <button mat-raised-button color="primary" type="button" (click)="onSubmit()">
+      Order
+    </button>
+
+    <button mat-raised-button color="primary" type="button" (click)="onCancel()">
+        Clear Cart
+    </button>
+  </mat-card-actions>
+  <div *ngIf="!items">
+    <h3 class="empty">Your cart is empty, feel free to browse!</h3>
+  </div>
+</div>
+</mat-card>
+</div>

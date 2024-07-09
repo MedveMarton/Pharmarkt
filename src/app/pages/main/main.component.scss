@@ -1,0 +1,29 @@
+.mainbgdiv {
+  background-image: url("../../../assets/MainBg.jpg");
+  height: 100vh;
+
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-align: center;
+}
+
+h1{
+  padding-top: 10px;
+}
+
+.maincard {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+
+}
+
+mat-card {
+  margin-top: 25px;
+  width: 400px;
+}
+
+
+
+

@@ -1,0 +1,14 @@
+{
+  "targets": {
+    "pharmarkt-570bc": {
+      "hosting": {
+        "pharmarkt": [
+          "pharmarkt-570bc"
+        ]
+      }
+    }
+  },
+  "projects": {
+    "default": "pharmarkt-570bc"
+  }
+}
